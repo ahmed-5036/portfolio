@@ -391,34 +391,65 @@ article .icon {
 
 .contact-info-upper-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 2rem; /* Space between each contact-info-container */
     border-radius: 2rem;
     border: rgb(53, 53, 53) 0.1rem solid;
     border-color: rgb(163, 163, 163);
     background: rgb(250, 250, 250);
     margin: 2rem auto;
-    padding: 0.5rem;
+    padding: 2rem; /* Add padding to the container */
 }
 
 .contact-info-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    margin: 1rem;
+    gap: 1rem; /* Space between icon and text */
+    padding: 2rem; /* Add padding around each contact item */
+    border-radius: 1.5rem; /* Rounded corners for better appearance */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.contact-info-container:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Light background on hover */
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+.contact-info-container img {
+    transition: transform 0.3s ease; /* Smooth transition for icon */
+}
+
+.contact-info-container:hover img {
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+}
+
+.contact-info-container h3, .contact-info-container p a {
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.contact-info-container:hover h3,
+.contact-info-container:hover p a {
+    color: #007bff; /* Change text color on hover */
 }
 
 .contact-info-container p {
-    font-size: larger;
+    margin-bottom: 3rem; /* Space below each contact detail */
 }
 
-.contact-icon {
-    cursor: default;
+.contact-info-container p a {
+    text-decoration: none !important; /* Remove underline by default */
+}
+
+.contact-info-container p a:hover {
+    text-decoration: none !important; /* Ensure no underline on hover */
 }
 
 .email-icon {
     height: 2.5rem;
 }
+
 
 /* FOOTER SECTION */
 
